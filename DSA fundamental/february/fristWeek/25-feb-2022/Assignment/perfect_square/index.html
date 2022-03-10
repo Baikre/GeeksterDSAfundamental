@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ 
+        function perfect_square(num){
+
+            let f = 0;
+            let l = num;
+            while (f <= l) {
+                mid =  Math.floor((f+l)/2);
+               let curentSquare = mid * mid;
+               console.log('f', f, 'l', l, 'mid', mid);
+               if(curentSquare === num){
+                   return "true " + mid;
+               }
+                if(curentSquare > num){
+                   l = mid - 1;
+               }
+               else{
+                   f = mid + 1;
+               }
+               
+            }
+            return false;
+        }
+       let result = perfect_square(0)
+        console.log(result);
+        
+
+        
+    </script>
+</body>
+</html>
